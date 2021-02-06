@@ -5,17 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentRight="true"
-    tools:context=".MainActivity">
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity"
+    android:layout_alignParentEnd="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:orientation="vertical">
 
         <RelativeLayout
-            android:id="@+id/root"
+            android:id="@+id/piclay"
             android:layout_width="match_parent"
             android:layout_height="200dp">
 
@@ -26,41 +23,43 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/textlay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/piclay"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="30dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="end:"
+                android:text="@string/end"
                 android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/endtext"
-                android:layout_width="38dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:imeOptions="actionDone"
                 android:inputType="numberSigned"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:text="180"
+                android:text="@string/_180"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="30dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="start:"
+                android:text="@string/start"
                 android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/starttext"
-                android:layout_width="38dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:imeOptions="actionDone"
@@ -72,28 +71,30 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="30dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="time:"
+                android:text="@string/time"
                 android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/time"
-                android:layout_width="38dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:imeOptions="actionDone"
-                android:selectAllOnFocus="true"
                 android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
                 android:singleLine="true"
                 android:text="0"
                 android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/butlay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/textlay"
             android:orientation="horizontal">
 
             <Button
@@ -124,7 +125,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@id/butlay">
 
             <TextView
                 android:id="@+id/output"
@@ -154,6 +156,5 @@
 
         </RelativeLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
-</RelativeLayout>
